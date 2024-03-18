@@ -53,11 +53,11 @@ public class UserRepositoryMariadb implements UserRepositoryInterface, Closeable
             // récupération du premier (et seul) tuple résultat
             if (result.next()) {
                 String mail = result.getString("mail");
-                String pwd = result.getString("pwd");
                 String name = result.getString("name");
+                String pwd = result.getString("pwd");
 
                 // création du user courant
-                selectedUser = new User(id, mail, pwd, name);
+                selectedUser = new User(id, mail, name, pwd);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -81,11 +81,11 @@ public class UserRepositoryMariadb implements UserRepositoryInterface, Closeable
             while (result.next()) {
                 int id = result.getInt("id");
                 String mail = result.getString("mail");
-                String pwd = result.getString("pwd");
                 String name = result.getString("name");
+                String pwd = result.getString("pwd");
 
                 // création du user courant
-                User currentUser = new User(id, mail, pwd, name);
+                User currentUser = new User(id, mail, name, pwd);
 
                 // ajout du user courant à la liste
                 allUsers.add(currentUser);
