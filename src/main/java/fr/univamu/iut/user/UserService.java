@@ -30,10 +30,10 @@ public class UserService {
         ArrayList<User> allUsers = userRepo.getAllUsers();
 
         // on supprime les informations sur les mots de passe et les mails
-//        for( User currentUser : allUsers ){
-//            currentUser.setMail("");
-//            currentUser.setPwd("");
-//        }
+        for( User currentUser : allUsers ){
+            currentUser.setMail("");
+            currentUser.setPwd("");
+        }
 
         // création du json et conversion de la liste de users
         String result = null;
