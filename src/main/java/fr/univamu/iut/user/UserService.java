@@ -52,7 +52,7 @@ public class UserService {
      * @param id l'identifiant de l'utilisateur recherché
      * @return une chaîne de caractère contenant les informations au format JSON
      */
-    public String getUserJSON( int id ){
+    public String getUserJSON(String id ){
 
             User user = userRepo.getUser(id);
 

@@ -13,11 +13,11 @@ public interface UserRepositoryInterface {
     public void close();
 
     /**
-     * Méthode retournant le user dont la référence est passée en paramètre
-     * @param id identifiant du user recherché
-     * @return un objet User représentant le user recherché
+     * Méthode retournant l'user dont la référence est passée en paramètre
+     * @param id identifiant de l'user recherché
+     * @return un objet User représentant l'user recherché
      */
-    public User getUser( int id );
+    public User getUser(String id );
 
     /**
      * Méthode retournant la liste des users

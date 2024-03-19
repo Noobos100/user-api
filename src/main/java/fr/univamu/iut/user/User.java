@@ -1,7 +1,7 @@
 package fr.univamu.iut.user;
 
 public class User {
-    protected int id;
+    protected String id;
     protected String name;
     protected String pwd;
     protected String mail;
@@ -9,14 +9,14 @@ public class User {
     public User() {
     }
 
-    public User(int id, String mail, String name, String pwd) {
+    public User(String id, String mail, String name, String pwd) {
         this.id = id;
         this.name = name;
         this.pwd = pwd;
         this.mail = mail;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

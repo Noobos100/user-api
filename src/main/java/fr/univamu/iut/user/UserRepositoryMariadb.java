@@ -37,7 +37,7 @@ public class UserRepositoryMariadb implements UserRepositoryInterface, Closeable
     }
 
     @Override
-    public User getUser(int id) {
+    public User getUser(String id) {
 
         User selectedUser = null;
 
@@ -45,7 +45,7 @@ public class UserRepositoryMariadb implements UserRepositoryInterface, Closeable
 
         // construction et exécution d'une requête préparée
         try (PreparedStatement ps = dbConnection.prepareStatement(query)) {
-            ps.setInt(1, id);
+            ps.setString(1, id);
 
             // exécution de la requête
             ResultSet result = ps.executeQuery();
@@ -79,15 +79,15 @@ public class UserRepositoryMariadb implements UserRepositoryInterface, Closeable
 
             // récupération des tuples résultat
             while (result.next()) {
-                int id = result.getInt("id");
+                String id = result.getString("id");
                 String mail = result.getString("mail");
                 String name = result.getString("name");
                 String pwd = result.getString("pwd");
 
-                // création du user courant
+                // création de l'user courant
                 User currentUser = new User(id, mail, name, pwd);
 
-                // ajout du user courant à la liste
+                // ajout de l'user courant à la liste
                 allUsers.add(currentUser);
             }
         } catch (SQLException e) {

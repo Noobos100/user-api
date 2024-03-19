@@ -3,7 +3,6 @@ package fr.univamu.iut.user;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.Response;
 
 
 /**
@@ -57,7 +56,7 @@ public class UserResource {
     @GET
     @Path("{id}")
     @Produces("application/json")
-    public String getUser( @PathParam("id") int id){
+    public String getUser( @PathParam("id") String id){
         return service.getUserJSON(id);
     }
 }
