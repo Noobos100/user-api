@@ -1,5 +1,7 @@
-package fr.univamu.iut.user;
+package fr.univamu.iut.user.resource;
 
+import fr.univamu.iut.user.data.UserRepositoryInterface;
+import fr.univamu.iut.user.service.UserAuthenticationService;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;

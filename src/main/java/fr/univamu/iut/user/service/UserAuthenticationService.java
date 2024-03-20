@@ -1,4 +1,7 @@
-package fr.univamu.iut.user;
+package fr.univamu.iut.user.service;
+
+import fr.univamu.iut.user.User;
+import fr.univamu.iut.user.data.UserRepositoryInterface;
 
 /**
  * Classe représentant le cas d'utilisation "authentifier un utilisateur"
@@ -33,6 +36,6 @@ public class UserAuthenticationService {
             return false;
 
         // si le mot de passe n'est pas correct
-        return currentUser.pwd.equals(pwd);
+        return currentUser.getPwd().equals(pwd);
     }
 }

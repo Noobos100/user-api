@@ -1,5 +1,7 @@
-package fr.univamu.iut.user;
+package fr.univamu.iut.user.service;
 
+import fr.univamu.iut.user.User;
+import fr.univamu.iut.user.data.UserRepositoryInterface;
 import jakarta.json.bind.Jsonb;
 import jakarta.json.bind.JsonbBuilder;
 

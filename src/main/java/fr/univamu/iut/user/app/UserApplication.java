@@ -1,5 +1,7 @@
-package fr.univamu.iut.user;
+package fr.univamu.iut.user.app;
 
+import fr.univamu.iut.user.data.UserRepositoryInterface;
+import fr.univamu.iut.user.data.UserRepositoryMariadb;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Disposes;
 import jakarta.enterprise.inject.Produces;

@@ -1,4 +1,6 @@
-package fr.univamu.iut.user;
+package fr.univamu.iut.user.data;
+
+import fr.univamu.iut.user.User;
 
 import java.io.Closeable;
 import java.sql.*;
